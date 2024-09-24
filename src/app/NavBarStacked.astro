@@ -1,5 +1,6 @@
 ---
-import { asset, url } from '../lib/data.js';
+import { url } from '../lib/data.js';
+import SipdLogo from '../app/assets/siped.svg';
 ---
 
 <nav
@@ -8,19 +9,15 @@ import { asset, url } from '../lib/data.js';
 	<div class="container py-3 mx-auto">
 		<div class="flex items-center justify-between">
 			<div class="flex items-center justify-start">
-				<a href={url()} class="flex mr-4">
-					<img
-						src={asset('images/logo.svg')}
-						class="h-8 mr-3"
-						alt="Flowbite Logo"
-					/>
+				<a href={url()} class="flex items-center gap-2 mr-4">
+					<img src={SipdLogo} />
 					<span
 						class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
-						>Flowbite</span
+						>SIPD</span
 					>
 				</a>
 				<div class="hidden sm:flex sm:ml-6">
-					<ul class="flex space-x-8">
+					<ul class="flex gap-5">
 						<li>
 							<a
 								href={url()}
@@ -115,7 +112,7 @@ import { asset, url } from '../lib/data.js';
 		<ul class="pt-2">
 			<li>
 				<a
-					href="#"
+					href={url('dashboard')}
 					class="block py-2 pl-3 pr-4 text-base font-normal text-gray-900 bg-gray-100 dark:bg-gray-700 dark:text-white"
 					>Dashboard</a
 				>
