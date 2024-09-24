@@ -1,8 +1,8 @@
 {
-	"name": "flowbite-astro-admin-dashboard",
+	"name": "dashboard-sipd",
 	"version": "1.0.2",
 	"private": "true",
-	"description": "A free and open-source admin dashboard template built with Tailwind CSS, Flowbite and Astro",
+	"description": "Dashboard | SIPD",
 	"keywords": [
 		"tailwind",
 		"tailwind css",

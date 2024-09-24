@@ -2,6 +2,7 @@
 /* eslint max-lines: 'off' */
 
 import { url } from '../lib/data.js';
+import ColorModeSwitcher from '../components/ColorModeSwitcher.astro';
 ---
 
 <script>
@@ -66,11 +67,11 @@ import { url } from '../lib/data.js';
 <!-- TODO: Dynamic dropdowns -->
 <aside
 	id="sidebar"
-	class="fixed top-0 left-0 z-20 flex flex-col flex-shrink-0 w-72 h-full pt-16 font-normal duration-75 lg:flex transition-width"
+	class="fixed top-0 left-0 z-20 flex flex-col flex-shrink-0 w-64 h-full pt-16 font-normal duration-75 lg:flex transition-width"
 	aria-label="Sidebar"
 >
 	<div
-		class="relative flex flex-col flex-1 min-h-0 pt-0 bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700"
+		class="relative flex flex-col flex-1 min-h-0 pt-0 bg-white border-gray-200 dark:bg-[#0c0b10]"
 	>
 		<div
 			class:list={[
@@ -81,7 +82,7 @@ import { url } from '../lib/data.js';
 			]}
 		>
 			<div
-				class="flex-1 px-3 space-y-1 bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700"
+				class="flex-1 px-3 space-y-1 bg-white divide-y divide-gray-200 dark:bg-[#0c0b10] dark:divide-gray-700"
 			>
 				<ul class="pb-2 space-y-2">
 					<p class="mb-5 mt-5 px-5 dark:text-neutral-200">MENU UTAMA</p>
@@ -131,7 +132,7 @@ import { url } from '../lib/data.js';
 							data-collapse-toggle="dropdown-layouts"
 						>
 							<span
-								class="flex-1 ml-3 text-left whitespace-nowrap"
+								class="flex-1 text-left whitespace-nowrap"
 								sidebar-toggle-item>Informasi Pembangunan</span
 							>
 							<svg
@@ -385,7 +386,7 @@ import { url } from '../lib/data.js';
 			</div>
 		</div>
 		<div
-			class="absolute bottom-0 left-0 justify-center hidden w-full p-4 space-x-4 bg-white lg:flex dark:bg-gray-800"
+			class="absolute bottom-0 left-0 justify-center hidden w-full p-4 space-x-4 bg-white lg:flex items-center dark:bg-[#0c0b10]"
 			sidebar-bottom-menu
 		>
 			<a
@@ -459,6 +460,7 @@ import { url } from '../lib/data.js';
 					></svg
 				>
 			</button>
+				<ColorModeSwitcher />
 			<!-- Dropdown -->
 			<div
 				class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700"
