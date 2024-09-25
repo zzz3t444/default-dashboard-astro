@@ -6,6 +6,11 @@ const DEV_PORT = 2121;
 
 // https://astro.build/config
 export default defineConfig({
+	build: {
+    rollupOptions: {
+      external: ['shiki/themes/hc_light.json']
+    }
+  },
 	site: process.env.CI
 		? 'https://themesberg.github.io'
 		: `http://localhost:${DEV_PORT}`,
