@@ -1,0 +1,22 @@
+---
+// YearDropdown.astro
+const currentYear = new Date().getFullYear();
+const startYear = 2020;
+const years = Array.from(
+	{ length: currentYear - startYear + 1 },
+	(_, index) => startYear + index,
+).reverse(); // Reverse the array so the most recent year is at the top
+---
+
+<div class="relative inline-block">
+	<select
+		class="block appearance-none w-full bg-[#f20a34] border text-white border-gray-300 px-5 py-2 rounded-full pr-8 shadow leading-tight focus:outline-none focus:shadow-outline"
+	>
+		<option value="">Select Year</option>
+		{years.map((year) => <option value={year}>{year}</option>)}
+	</select>
+	<div
+		class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-white"
+	>
+	</div>
+</div>
